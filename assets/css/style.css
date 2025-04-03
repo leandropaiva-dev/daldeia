@@ -1241,6 +1241,127 @@ section {
   background: #d3af71;
 }
 
+/* Estiliza o campo de horário */
+.custom-select {
+  background-color: #0c0b09;
+  border: 1px solid #625b4b;
+  color: #fff;
+  height: 44px;
+}
+
+/* Melhora a aparência do dropdown */
+.custom-select:focus {
+  border-color: #cda45e;
+  box-shadow: none;
+}
+
+/* Flatpickr (calendário) estilizado para combinar com o tema */
+.flatpickr-calendar {
+  background-color: #ebd091;
+  color: #555050;
+  border: 1px solid #625b4b;
+}
+.flatpickr-day.selected, .flatpickr-day:hover {
+  background: #cda45e !important;
+  color: #6a00ff; !important;
+}
+
+/* Estiliza o select mantendo o background e bordas do formulário */
+.custom-select {
+  background-color: #0c0b09;
+  border: 1px solid #625b4b;
+  color: #a49b89; /* Cinza igual aos placeholders */
+  height: 44px;
+}
+
+/* Quando um horário é escolhido, o texto fica branco */
+.custom-select option {
+  background-color: #cda45e;
+  color: rgb(0, 0, 0);
+}
+
+/* Garante que a opção de placeholder permaneça cinza */
+.custom-select option:disabled {
+  color: #a49b89;
+}
+
+.custom-select:valid {
+  background-color: #0c0b09;
+  color: white;
+}
+
+
+
+#people {
+  width: 100%;
+}
+
+/* Garante que o placeholder siga o estilo do formulário */
+#people::placeholder {
+  color: #a49b89;
+}
+#people {
+  width: 100%;
+}
+
+/* Garante que o placeholder siga o estilo do formulário */
+#people::placeholder {
+  color: #a49b89;
+}
+
+
+
+/* Estiliza o fundo e a cor do texto na seleção do país */
+.iti__dropdown {
+  background-color: #cda45e !important; /* Fundo dourado */
+  color: rgb(0, 0, 0) !important; /* Texto preto */
+  border: 1px solid #625b4b; /* Borda combinando com o formulário */
+}
+
+
+/* Garante que o texto dos países seja visível */
+.iti__country {
+  color: rgb(0, 0, 0) !important; /* Texto preto */
+}
+
+/* Estiliza o hover ao passar o mouse sobre um país */
+.iti__country:hover {
+  background-color: #b9974f !important; /* Um tom mais escuro de dourado */
+}
+
+/* Garante que o país selecionado fique com a cor correta */
+.iti__selected-flag {
+  background-color: #a49b89; !important; /* Fundo dourado */
+}
+
+
+/* Garante que todos os campos tenham a mesma largura */
+#phone, .form-control {
+  width: 100% !important; /* Garante que o campo de telefone tenha a largura 100%, igual aos outros campos */
+  background-color: #0c0b09;
+  border: 1px solid #625b4b;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* Garante que o padding não sobrescreva a largura */
+}
+
+/* Ajuste do container do intl-tel-input */
+.iti {
+  width: 100% !important; /* Garante que a largura do container se ajuste automaticamente */
+  display: inline-block;
+}
+
+/* Ajuste da bandeira para não interferir no layout */
+.iti__flag-container {
+  width: auto !important;
+}
+
+/* Quando o campo de telefone estiver em foco */
+#phone:focus {
+  border-color: #cda45e;
+}
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/

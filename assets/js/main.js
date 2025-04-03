@@ -33,6 +33,71 @@
     }
   }
 
+
+
+/**
+   HORARIO
+   */
+  function populateTimeOptions() {
+    const timeSelect = document.getElementById('time');
+    timeSelect.innerHTML = '<option value="">Horário</option>';
+
+    let hour = 12;
+    let minute = 0;
+
+    while (hour < 23) {
+        const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        const option = document.createElement('option');
+        option.value = timeString;
+        option.textContent = timeString;
+        timeSelect.appendChild(option);
+
+        minute += 30;
+        if (minute === 60) {
+            hour++;
+            minute = 0;
+        }
+    }
+}
+
+populateTimeOptions();
+
+  /**
+  CALENDARIO DATA
+   */
+
+  document.addEventListener("DOMContentLoaded", function () {
+    flatpickr("#date", {
+      dateFormat: "Y-m-d", // Formato de data (ano-mês-dia)
+      minDate: "today", // Impede selecionar datas passadas
+      locale: "pt", // Define o idioma como português
+    });
+  });
+
+  /**
+  TELEFONE BANDEIRAS E ETC
+   */
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.querySelector("#phone");
+    const iti = window.intlTelInput(input, {
+      initialCountry: "pt",  // Define Portugal como país inicial
+      separateDialCode: true,  // Exibe o código do país separado
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js", // Script para validação
+    });
+
+    // Para exibir a bandeira corretamente e a validação ao submeter o formulário
+    const form = document.querySelector(".php-email-form");
+    form.addEventListener("submit", function (e) {
+      if (!iti.isValidNumber()) {
+        e.preventDefault();
+        alert("Por favor, insira um número de telefone válido.");
+      }
+    });
+  });
+
+
+
   /**
    * Easy on scroll event listener 
    */
